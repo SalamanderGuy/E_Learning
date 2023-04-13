@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>e-Learning - Κεφάλαιο 3</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm" style="border-bottom: 1px solid #aaa">
+            <a class="navbar-brand" href="homepage.html">
+                <img src="icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                e-Learning
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                            Κεφάλαια
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="chapter_1.html">Κεφάλαιο 1 - Εισαγωγή στους Αλγορίθμους</a>
+                            <a class="dropdown-item" href="chapter_2.html">Κεφάλαιο 2 - Εισαγωγή στην C</a>
+                            <a class="dropdown-item" href="chapter_3.html">Κεφάλαιο 3 - Η γλώσσα C σε βάθος</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Διαγωνίσματα
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="quiz1.html">Διαγώνισμα 1 - Εισαγωγή στους Αλγορίθμους</a>
+                            <a class="dropdown-item" href="quiz2.html">Διαγώνισμα 2 - Εισαγωγή στην C</a>
+                            <a class="dropdown-item" href="quiz3.html">Διαγώνισμα 3 - Η γλώσσα C σε βάθος</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="quiz4.html">Τελικό Διαγώνισμα - Επαναληπτικό</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics">Στατιστικά</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <br>
+            <h1>If statements in C</h1>
+            The ability to control the flow of your program, letting it make decisions on
+            what code to execute, is valuable to the programmer. The if statement allows
+            you to control if a program enters a section of code or not based on whether a
+            given condition is true or false. One of the important functions of the if
+            statement is that it allows the program to select an action based upon the
+            user's input. For example, by using an if statement to check a user-entered
+            password, your program can decide whether a user is allowed access to the
+            program.
+            <br><br>
+            Without a conditional statement such as the if statement, programs would run
+            almost the exact same way every time, always following the same sequence of
+            function calls. If statements allow the flow of the program to be changed,
+            which leads to more interesting code.
+            <br><br>
+            Before discussing the actual structure of the if statement, let us examine the
+            meaning of TRUE and FALSE in computer terminology. A true statement is one
+            that evaluates to a nonzero number. A false statement evaluates to zero. When
+            you perform comparison with the relational operators, the operator will return
+            1 if the comparison is true, or 0 if the comparison is false. For example, the
+            check 0 == 2 evaluates to 0. The check 2 == 2 evaluates to a 1. If this
+            confuses you, try to use a printf statement to output the result of those
+            various comparisons (for example printf ( "%d", 2 == 1 );)
+            <br><br>
+            When programming, the aim of the program will often require the checking of
+            one value stored by a variable against another value to determine whether one
+            is larger, smaller, or equal to the other.
+            <br><br>
+            There are a number of operators that allow these checks.
+            <br><br>
+            Here are the relational operators, as they are known, along with examples:
+            <div>
+                <div class="syntaxhighlighter  cpp">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td class="gutter">
+                                    <div class="line number1 index0 alt2">1</div>
+                                    <div class="line number2 index1 alt1">2</div>
+                                    <div class="line number3 index2 alt2">3</div>
+                                    <div class="line number4 index3 alt1">4</div>
+                                    <div class="line number5 index4 alt2">5</div>
+                                    <div class="line number6 index5 alt1">6</div>
+                                </td>
+                                <td class="code">
+                                    <div class="container">
+                                        <div class="line number1 index0 alt2"><code
+                                                class="cpp plain">&gt;&nbsp;&nbsp;&nbsp;&nbsp; greater than&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 &gt; 4 is TRUE</code>
+                                        </div>
+                                        <div class="line number2 index1 alt1"><code
+                                                class="cpp plain">&lt;&nbsp;&nbsp;&nbsp;&nbsp; less than&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 &lt; 5 is TRUE</code>
+                                        </div>
+                                        <div class="line number3 index2 alt2"><code
+                                                class="cpp plain">&gt;=&nbsp;&nbsp;&nbsp; greater than or equal&nbsp;&nbsp;&nbsp;&nbsp; 4 &gt;= 4 is TRUE</code>
+                                        </div>
+                                        <div class="line number4 index3 alt1"><code
+                                                class="cpp plain">&lt;=&nbsp;&nbsp;&nbsp; less than or equal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &lt;= 4 is TRUE</code>
+                                        </div>
+                                        <div class="line number5 index4 alt2"><code
+                                                class="cpp plain">==&nbsp;&nbsp;&nbsp; equal to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 == 5 is TRUE</code>
+                                        </div>
+                                        <div class="line number6 index5 alt1"><code
+                                                class="cpp plain">!=&nbsp;&nbsp;&nbsp; not equal to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 != 4 is TRUE</code>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            It is highly probable that you have seen these before, probably with slightly
+            different symbols. They should not present any hindrance to understanding. Now
+            that you understand TRUE and FALSE well as the comparison operators, let us
+            look at the actual structure of if statements.
+            <br><br>
+            <h2>Basic If Syntax</h2>
+            The structure of an if statement is as follows:
+            <div>
+                <div class="syntaxhighlighter  cpp">
+                    <table cellspacing="0" cellpadding="0" border="0">
+
+                        <tbody>
+                            <tr>
+                                <td class="gutter">
+                                    <div class="line number1 index0 alt2">1</div>
+                                    <div class="line number2 index1 alt1">2</div>
+                                </td>
+                                <td class="code">
+                                    <div class="container">
+                                        <div class="line number1 index0 alt2"><code class="cpp keyword bold">if</code>
+                                            <code class="cpp plain">( statement is TRUE )</code>
+                                        </div>
+                                        <div class="line number2 index1 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp plain">Execute </code><code
+                                                class="cpp keyword bold">this</code> <code
+                                                class="cpp plain">line of code</code></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            Here is a simple example that shows the syntax:
+            <div>
+                <div class="syntaxhighlighter  cpp">
+                    <table cellspacing="0" cellpadding="0" border="0">
+
+                        <tbody>
+                            <tr>
+                                <td class="gutter">
+                                    <div class="line number1 index0 alt2">1</div>
+                                    <div class="line number2 index1 alt1">2</div>
+                                </td>
+                                <td class="code">
+                                    <div class="container">
+                                        <div class="line number1 index0 alt2"><code class="cpp keyword bold">if</code>
+                                            <code class="cpp plain">( 5 &lt; 10 )</code>
+                                        </div>
+                                        <div class="line number2 index1 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp functions bold">printf</code><code
+                                                class="cpp plain">( </code><code
+                                                class="cpp string">"Five is now less than ten, that's a big surprise"</code>
+                                            <code class="cpp plain">);</code>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            Here, we're just evaluating the statement, "is five less than ten", to see if
+            it is true or not; with any luck, it is! If you want, you can write your
+            own full program including stdio.h and put this in the main function and run
+            it to test.
+
+            <br><br>
+            To have more than one statement execute after an if statement that evaluates
+            to true, use braces, like we did with the body of the main function. Anything
+            inside braces is called a compound statement, or a block. When using if
+            statements, the code that depends on the if statement is called the "body" of
+            the if statement.
+            <br><br>
+            For example:
+            <div>
+                <div class="syntaxhighlighter  cpp">
+                    <table cellspacing="0" cellpadding="0" border="0">
+
+                        <tbody>
+                            <tr>
+                                <td class="gutter">
+                                    <div class="line number1 index0 alt2">1</div>
+                                    <div class="line number2 index1 alt1">2</div>
+                                    <div class="line number3 index2 alt2">3</div>
+                                    <div class="line number4 index3 alt1">4</div>
+                                </td>
+                                <td class="code">
+                                    <div class="container">
+                                        <div class="line number1 index0 alt2"><code class="cpp keyword bold">if</code>
+                                            <code class="cpp plain">( TRUE ) {</code>
+                                        </div>
+                                        <div class="line number2 index1 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp comments">/* between the braces is the body of the if statement */</code>
+                                        </div>
+                                        <div class="line number3 index2 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp plain">Execute all statements inside the body</code></div>
+                                        <div class="line number4 index3 alt1"><code class="cpp plain">}</code></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            I recommend always putting braces following if statements. If you do this,
+            you never have to remember to put them in when you want more than one
+            statement to be executed, and you make the body of the if statement more
+            visually clear.
+            <br><br>
+            <h2>Else</h2>
+            Sometimes when the condition in an if statement evaluates to false, it would
+            be nice to execute some code instead of the code executed when the statement
+            evaluates to true. The "else" statement effectively says that whatever code
+            after it (whether a single line or code between brackets) is executed if the
+            if statement is FALSE.
+            <br><br>
+            It can look like this:
+            <div>
+                <div class="syntaxhighlighter  cpp">
+                    <table cellspacing="0" cellpadding="0" border="0">
+
+                        <tbody>
+                            <tr>
+                                <td class="gutter">
+                                    <div class="line number1 index0 alt2">1</div>
+                                    <div class="line number2 index1 alt1">2</div>
+                                    <div class="line number3 index2 alt2">3</div>
+                                    <div class="line number4 index3 alt1">4</div>
+                                    <div class="line number5 index4 alt2">5</div>
+                                    <div class="line number6 index5 alt1">6</div>
+                                </td>
+                                <td class="code">
+                                    <div class="container">
+                                        <div class="line number1 index0 alt2"><code class="cpp keyword bold">if</code>
+                                            <code class="cpp plain">( TRUE ) {</code>
+                                        </div>
+                                        <div class="line number2 index1 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp comments">/* Execute these statements if TRUE */</code></div>
+                                        <div class="line number3 index2 alt2"><code class="cpp plain">}</code></div>
+                                        <div class="line number4 index3 alt1"><code class="cpp keyword bold">else</code>
+                                            <code class="cpp plain">{</code>
+                                        </div>
+                                        <div class="line number5 index4 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp comments">/* Execute these statements if FALSE */</code>
+                                        </div>
+                                        <div class="line number6 index5 alt1"><code class="cpp plain">}</code></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br><br>
+            <h2>Else if</h2>
+            Another use of else is when there are multiple conditional statements that may
+            all evaluate to true, yet you want only one if statement's body to execute.
+
+            You can use an "else if" statement following an if statement and its body;
+            that way, if the first statement is true, the "else if" will be ignored, but
+            if the if statement is false, it will then check the condition for the else if
+            statement. If the if statement was true the else statement will not be
+            checked. It is possible to use numerous else if statements to ensure that only
+            one block of code is executed.
+            <br><br>
+            Let's look at a simple program for you to try out on your own.
+            <div>
+                <div class="syntaxhighlighter  cpp">
+                    <table cellspacing="0" cellpadding="0" border="0">
+
+                        <tbody>
+                            <tr>
+                                <td class="gutter">
+                                    <div class="line number1 index0 alt2">1</div>
+                                    <div class="line number2 index1 alt1">2</div>
+                                    <div class="line number3 index2 alt2">3</div>
+                                    <div class="line number4 index3 alt1">4</div>
+                                    <div class="line number5 index4 alt2">5</div>
+                                    <div class="line number6 index5 alt1">6</div>
+                                    <div class="line number7 index6 alt2">7</div>
+                                    <div class="line number8 index7 alt1">8</div>
+                                    <div class="line number9 index8 alt2">9</div>
+                                    <div class="line number10 index9 alt1">10</div>
+                                    <div class="line number11 index10 alt2">11</div>
+                                    <div class="line number12 index11 alt1">12</div>
+                                    <div class="line number13 index12 alt2">13</div>
+                                    <div class="line number14 index13 alt1">14</div>
+                                    <div class="line number15 index14 alt2">15</div>
+                                    <div class="line number16 index15 alt1">16</div>
+                                    <div class="line number17 index16 alt2">17</div>
+                                    <div class="line number18 index17 alt1">18</div>
+                                    <div class="line number19 index18 alt2">19</div>
+                                    <div class="line number20 index19 alt1">20</div>
+                                </td>
+                                <td class="code">
+                                    <div class="container">
+                                        <div class="line number1 index0 alt2"><code
+                                                class="cpp preprocessor">#include &lt;stdio.h&gt;&nbsp;&nbsp;&nbsp; </code>
+                                        </div>
+                                        <div class="line number2 index1 alt1">&nbsp;</div>
+                                        <div class="line number3 index2 alt2"><code class="cpp color1 bold">int</code>
+                                            <code
+                                                class="cpp plain">main()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code
+                                                class="cpp comments">/* Most important part of the program!&nbsp; */</code>
+                                        </div>
+                                        <div class="line number4 index3 alt1"><code class="cpp plain">{</code></div>
+                                        <div class="line number5 index4 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp color1 bold">int</code> <code
+                                                class="cpp plain">age;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code
+                                                class="cpp comments">/* Need a variable... */</code></div>
+                                        <div class="line number6 index5 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;</code>&nbsp;</div>
+                                        <div class="line number7 index6 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp functions bold">printf</code><code
+                                                class="cpp plain">( </code><code
+                                                class="cpp string">"Please enter your age: "</code> <code
+                                                class="cpp plain">);&nbsp; </code><code
+                                                class="cpp comments">/* Asks for age */</code></div>
+                                        <div class="line number8 index7 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp functions bold">scanf</code><code
+                                                class="cpp plain">( </code><code class="cpp string">"%d"</code><code
+                                                class="cpp plain">, &amp;age );&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code
+                                                class="cpp comments">/* The input is put in age */</code></div>
+                                        <div class="line number9 index8 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp keyword bold">if</code> <code
+                                                class="cpp plain">( age &lt; 100 ) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code
+                                                class="cpp comments">/* If the age is less than 100 */</code></div>
+                                        <div class="line number10 index9 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp functions bold">printf</code> <code
+                                                class="cpp plain">(</code><code
+                                                class="cpp string">"You are pretty young!\n"</code> <code
+                                                class="cpp plain">); </code><code
+                                                class="cpp comments">/* Just to show you it works... */</code></div>
+                                        <div class="line number11 index10 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp plain">}</code></div>
+                                        <div class="line number12 index11 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp keyword bold">else</code> <code
+                                                class="cpp keyword bold">if</code> <code
+                                                class="cpp plain">( age == 100 ) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code
+                                                class="cpp comments">/* I use else just to show an example */</code>
+                                        </div>
+                                        <div class="line number13 index12 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp functions bold">printf</code><code
+                                                class="cpp plain">( </code><code
+                                                class="cpp string">"You are old\n"</code> <code
+                                                class="cpp plain">);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div>
+                                        <div class="line number14 index13 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp plain">}</code></div>
+                                        <div class="line number15 index14 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp keyword bold">else</code> <code class="cpp plain">{</code>
+                                        </div>
+                                        <div class="line number16 index15 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp functions bold">printf</code><code
+                                                class="cpp plain">( </code><code
+                                                class="cpp string">"You are really old\n"</code> <code
+                                                class="cpp plain">);&nbsp;&nbsp;&nbsp;&nbsp; </code><code
+                                                class="cpp comments">/* Executed if no other statement is */</code>
+                                        </div>
+                                        <div class="line number17 index16 alt2"><code
+                                                class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                                class="cpp plain">}</code></div>
+                                        <div class="line number18 index17 alt1"><code
+                                                class="cpp spaces">&nbsp;&nbsp;</code><code
+                                                class="cpp keyword bold">return</code> <code class="cpp plain">0;</code>
+                                        </div>
+                                        <div class="line number19 index18 alt2">&nbsp;</div>
+                                        <div class="line number20 index19 alt1"><code class="cpp plain">}</code></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br><br>
+            <h2>More interesting conditions using boolean operators</h2>
+            Boolean operators allow you to create more complex conditional statements. For
+            example, if you wish to check if a variable is both greater than five and less
+            than ten, you could use the Boolean AND to ensure both var &gt; 5 and var &lt;
+            10 are true. In the following discussion of Boolean operators, I will
+            capitalize the Boolean operators in order to distinguish them from normal
+            English. The actual C operators of equivalent function will be described
+            further along into the tutorial - the C symbols are not: OR, AND, NOT, although
+            they are of equivalent function.
+            <br><br>
+            When using if statements, you will often wish to check multiple different conditions. You must understand
+            the Boolean operators OR, NOT, and AND. The boolean operators function in a similar way to the comparison
+            operators: each returns 0 if evaluates to FALSE or 1 if it evaluates to TRUE.
+            <br><br>
+            NOT: The NOT operator accepts one input. If that input is TRUE, it returns
+            FALSE, and if that input is FALSE, it returns TRUE. For example, NOT (1)
+            evaluates to 0, and NOT (0) evaluates to 1. NOT (any number but zero) evaluates
+            to 0. In C NOT is written as !. NOT is evaluated prior to both AND and
+            OR.
+            <br><br>
+            AND: This is another important command. AND returns TRUE if both inputs are
+            TRUE (if 'this' AND 'that' are true). (1) AND (0) would evaluate to zero
+            because one of the inputs is false (both must be TRUE for it to evaluate to
+            TRUE). (1) AND (1) evaluates to 1. (any number but 0) AND (0) evaluates to 0.
+            The AND operator is written &amp;&amp; in C. Do not be confused by thinking it
+            checks equality between numbers: it does not. Keep in mind that the AND
+            operator is evaluated before the OR operator.
+            <br><br>
+            OR: Very useful is the OR statement! If either (or both) of the two values it
+            checks are TRUE then it returns TRUE. For example, (1) OR (0) evaluates to 1.
+            (0) OR (0) evaluates to 0. The OR is written as || in C. Those are the pipe
+            characters. On your keyboard, they may look like a stretched colon. On my
+            computer the pipe shares its key with \. Keep in mind that OR will be
+            evaluated after AND.
+            <br><br>
+            It is possible to combine several Boolean operators in a single statement;
+            often you will find doing so to be of great value when creating complex
+            expressions for if statements. What is !(1 &amp;&amp; 0)? Of course, it would be TRUE.
+            It is true is because 1 &amp;&amp; 0 evaluates to 0 and !0 evaluates to TRUE
+            (i.e., 1).
+            <br><br>
+            Try some of these - they're not too hard. If you have questions about them, feel free to stop by our forums.
+            <div>
+                <div class="syntaxhighlighter  cpp">
+                    <table cellspacing="0" cellpadding="0" border="0">
+
+                        <tbody>
+                            <tr>
+                                <td class="gutter">
+                                    <div class="line number1 index0 alt2">1</div>
+                                    <div class="line number2 index1 alt1">2</div>
+                                    <div class="line number3 index2 alt2">3</div>
+                                </td>
+                                <td class="code">
+                                    <div class="container">
+                                        <div class="line number1 index0 alt2"><code
+                                                class="cpp plain">A. !( 1 || 0 )&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ANSWER: 0&nbsp;&nbsp;&nbsp; </code>
+                                        </div>
+                                        <div class="line number2 index1 alt1"><code
+                                                class="cpp plain">B. !( 1 || 1 &amp;&amp; 0 )&nbsp;&nbsp;&nbsp; ANSWER: 0 (AND is evaluated before OR)</code>
+                                        </div>
+                                        <div class="line number3 index2 alt2"><code
+                                                class="cpp plain">C. !( ( 1 || 0 ) &amp;&amp; 0 )&nbsp; ANSWER: 1 (Parenthesis are useful)</code>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <h1>Loops in C</h1>
+        Loops are used to repeat a block of code. Being able to have your program
+        repeatedly execute a block of code is one of the most basic but useful tasks
+        in programming -- many programs or websites that produce extremely complex
+        output (such as a message board) are really only executing a single task many
+        times. (They may be executing a small number of tasks, but in principle, to
+        produce a list of messages only requires repeating the operation of reading in
+        some data and displaying it.) Now, think about what this means: a loop lets
+        you write a very simple statement to produce a significantly greater result
+        simply by repetition.
+        <br><br>
+        One caveat: before going further, you should understand the concept of
+        C's true and false, because it will be necessary when working with loops
+        (the conditions are the same as with if statements). This concept is covered
+        in the <a href="lesson2.html">previous tutorial</a>. There are three types of
+        loops: for, while, and do..while. Each of them has their specific uses. They
+        are all outlined below. <br><br>
+        FOR - for loops are the most useful type. The syntax for a for loop is
+        <br><br>
+        <div>
+            <div class="syntaxhighlighter  cpp">
+                <table cellspacing="0" cellpadding="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td class="gutter">
+                                <div class="line number1 index0 alt2">1</div>
+                                <div class="line number2 index1 alt1">2</div>
+                                <div class="line number3 index2 alt2">3</div>
+                            </td>
+                            <td class="code">
+                                <div class="container">
+                                    <div class="line number1 index0 alt2"><code class="cpp keyword bold">for</code>
+                                        <code
+                                            class="cpp plain">( variable initialization; condition; variable update ) {</code>
+                                    </div>
+                                    <div class="line number2 index1 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code
+                                            class="cpp plain">Code to execute </code><code
+                                            class="cpp keyword bold">while</code> <code
+                                            class="cpp plain">the condition is </code><code
+                                            class="cpp keyword bold">true</code></div>
+                                    <div class="line number3 index2 alt2"><code class="cpp plain">}</code></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        The variable initialization allows you to either declare a variable and give
+        it a value or give a value to an already existing variable. Second, the
+        condition tells the program that while the conditional expression is true the
+        loop should continue to repeat itself. The variable update section is the
+        easiest way for a for loop to handle changing of the variable. It is possible
+        to do things like x++, x = x + 10, or even x = random ( 5 ), and if you really
+        wanted to, you could call other functions that do nothing to the variable but
+        still have a useful effect on the code. Notice that a semicolon separates each
+        of these sections, that is important. Also note that every single one of the
+        sections may be empty, though the semicolons still have to be there. If the
+        condition is empty, it is evaluated as true and the loop will repeat until
+        something else stops it.
+        <br><br>
+        Example:
+        <div>
+            <div class="syntaxhighlighter  cpp">
+                <table cellspacing="0" cellpadding="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td class="gutter">
+                                <div class="line number1 index0 alt2">1</div>
+                                <div class="line number2 index1 alt1">2</div>
+                                <div class="line number3 index2 alt2">3</div>
+                                <div class="line number4 index3 alt1">4</div>
+                                <div class="line number5 index4 alt2">5</div>
+                                <div class="line number6 index5 alt1">6</div>
+                                <div class="line number7 index6 alt2">7</div>
+                                <div class="line number8 index7 alt1">8</div>
+                                <div class="line number9 index8 alt2">9</div>
+                                <div class="line number10 index9 alt1">10</div>
+                                <div class="line number11 index10 alt2">11</div>
+                                <div class="line number12 index11 alt1">12</div>
+                                <div class="line number13 index12 alt2">13</div>
+                                <div class="line number14 index13 alt1">14</div>
+                                <div class="line number15 index14 alt2">15</div>
+                            </td>
+                            <td class="code">
+                                <div class="container">
+                                    <div class="line number1 index0 alt2"><code
+                                            class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+                                    <div class="line number2 index1 alt1">&nbsp;</div>
+                                    <div class="line number3 index2 alt2"><code class="cpp color1 bold">int</code> <code
+                                            class="cpp plain">main()</code></div>
+                                    <div class="line number4 index3 alt1"><code class="cpp plain">{</code></div>
+                                    <div class="line number5 index4 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp color1 bold">int</code> <code class="cpp plain">x;</code></div>
+                                    <div class="line number6 index5 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp comments">/* The loop goes while x &lt; 10, and x increases by one every loop*/</code>
+                                    </div>
+                                    <div class="line number7 index6 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp keyword bold">for</code> <code
+                                            class="cpp plain">( x = 0; x &lt; 10; x++ ) {</code></div>
+                                    <div class="line number8 index7 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp comments">/* Keep in mind that the loop condition checks </code>
+                                    </div>
+                                    <div class="line number9 index8 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp comments">the conditional statement before it loops again.</code>
+                                    </div>
+                                    <div class="line number10 index9 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp comments">consequently, when x equals 10 the loop breaks.</code>
+                                    </div>
+                                    <div class="line number11 index10 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp comments">x is updated before the condition is checked. */</code>&nbsp;&nbsp;
+                                    </div>
+                                    <div class="line number12 index11 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp functions bold">printf</code><code
+                                            class="cpp plain">( </code><code class="cpp string">"%d\n"</code><code
+                                            class="cpp plain">, x );</code></div>
+                                    <div class="line number13 index12 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">}</code></div>
+                                    <div class="line number14 index13 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp functions bold">getchar</code><code class="cpp plain">();</code>
+                                    </div>
+                                    <div class="line number15 index14 alt2"><code class="cpp plain">}</code></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        This program is a very simple example of a for loop. x is set to zero, while x
+        is less than 10 it calls printf to display the value of the variable x, and it
+        adds 1 to x until the condition is met. Keep in mind also that the variable is
+        incremented after the code in the loop is run for the first time.
+        <br><br>
+        WHILE - WHILE loops are very simple. The basic structure is
+        <br><br>
+        while ( condition ) {
+        Code to execute while the condition is true
+        }
+
+        The true represents a boolean expression which could be x == 1 or while ( x !=
+        7 ) (x does not equal 7). It can be any combination of boolean statements that
+        are legal. Even, (while x ==5 || v == 7) which says execute the code while x
+        equals five or while v equals 7. Notice that a while loop is like a
+        stripped-down version of a for loop-- it has no initialization or update
+        section. However, an empty condition is not legal for a while loop as
+        it is with a for loop.
+        <br><br>
+        Example:
+        <div>
+            <div class="syntaxhighlighter  cpp">
+                <table cellspacing="0" cellpadding="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td class="gutter">
+                                <div class="line number1 index0 alt2">1</div>
+                                <div class="line number2 index1 alt1">2</div>
+                                <div class="line number3 index2 alt2">3</div>
+                                <div class="line number4 index3 alt1">4</div>
+                                <div class="line number5 index4 alt2">5</div>
+                                <div class="line number6 index5 alt1">6</div>
+                                <div class="line number7 index6 alt2">7</div>
+                                <div class="line number8 index7 alt1">8</div>
+                                <div class="line number9 index8 alt2">9</div>
+                                <div class="line number10 index9 alt1">10</div>
+                                <div class="line number11 index10 alt2">11</div>
+                                <div class="line number12 index11 alt1">12</div>
+                                <div class="line number13 index12 alt2">13</div>
+                            </td>
+                            <td class="code">
+                                <div class="container">
+                                    <div class="line number1 index0 alt2"><code
+                                            class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+                                    <div class="line number2 index1 alt1">&nbsp;</div>
+                                    <div class="line number3 index2 alt2"><code class="cpp color1 bold">int</code> <code
+                                            class="cpp plain">main()</code></div>
+                                    <div class="line number4 index3 alt1"><code class="cpp plain">{ </code></div>
+                                    <div class="line number5 index4 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code
+                                            class="cpp color1 bold">int</code> <code
+                                            class="cpp plain">x = 0;&nbsp; </code><code
+                                            class="cpp comments">/* Don't forget to declare variables */</code></div>
+                                    <div class="line number6 index5 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code>&nbsp;</div>
+                                    <div class="line number7 index6 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code
+                                            class="cpp keyword bold">while</code> <code
+                                            class="cpp plain">( x &lt; 10 ) { </code><code
+                                            class="cpp comments">/* While x is less than 10 */</code></div>
+                                    <div class="line number8 index7 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp functions bold">printf</code><code
+                                            class="cpp plain">( </code><code class="cpp string">"%d\n"</code><code
+                                            class="cpp plain">, x );</code></div>
+                                    <div class="line number9 index8 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">x++;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code
+                                            class="cpp comments">/* Update x so the condition can be met eventually */</code>
+                                    </div>
+                                    <div class="line number10 index9 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp plain">}</code></div>
+                                    <div class="line number11 index10 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code
+                                            class="cpp functions bold">getchar</code><code class="cpp plain">();</code>
+                                    </div>
+                                    <div class="line number12 index11 alt1">&nbsp;</div>
+                                    <div class="line number13 index12 alt2"><code class="cpp plain">}</code></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        This was another simple example, but it is longer than the above FOR loop. The
+        easiest way to think of the loop is that when it reaches the brace at the end
+        it jumps back up to the beginning of the loop, which checks the condition
+        again and decides whether to repeat the block another time, or stop and move
+        to the next statement after the block.
+        <br><br>
+        DO..WHILE - DO..WHILE loops are useful for things that want to loop at least
+        once. The structure is
+        <div>
+            <div class="syntaxhighlighter  cpp">
+                <table cellspacing="0" cellpadding="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td class="gutter">
+                                <div class="line number1 index0 alt2">1</div>
+                                <div class="line number2 index1 alt1">2</div>
+                            </td>
+                            <td class="code">
+                                <div class="container">
+                                    <div class="line number1 index0 alt2"><code class="cpp keyword bold">do</code> <code
+                                            class="cpp plain">{</code></div>
+                                    <div class="line number2 index1 alt1"><code class="cpp plain">} </code><code
+                                            class="cpp keyword bold">while</code> <code
+                                            class="cpp plain">( condition );</code></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        Notice that the condition is tested at the end of the block instead of the
+        beginning, so the block will be executed at least once. If the condition is
+        true, we jump back to the beginning of the block and execute it again. A
+        do..while loop is almost the same as a while loop except that the loop body is
+        guaranteed to execute at least once. A while loop says "Loop while the
+        condition is true, and execute this block of code", a do..while loop says
+        "Execute this block of code, and then continue to loop while the condition is
+        true".
+        <br><br>
+        Example:
+        <div>
+            <div class="syntaxhighlighter  cpp">
+                <table cellspacing="0" cellpadding="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td class="gutter">
+                                <div class="line number1 index0 alt2">1</div>
+                                <div class="line number2 index1 alt1">2</div>
+                                <div class="line number3 index2 alt2">3</div>
+                                <div class="line number4 index3 alt1">4</div>
+                                <div class="line number5 index4 alt2">5</div>
+                                <div class="line number6 index5 alt1">6</div>
+                                <div class="line number7 index6 alt2">7</div>
+                                <div class="line number8 index7 alt1">8</div>
+                                <div class="line number9 index8 alt2">9</div>
+                                <div class="line number10 index9 alt1">10</div>
+                                <div class="line number11 index10 alt2">11</div>
+                                <div class="line number12 index11 alt1">12</div>
+                                <div class="line number13 index12 alt2">13</div>
+                                <div class="line number14 index13 alt1">14</div>
+                            </td>
+                            <td class="code">
+                                <div class="container">
+                                    <div class="line number1 index0 alt2"><code
+                                            class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+                                    <div class="line number2 index1 alt1">&nbsp;</div>
+                                    <div class="line number3 index2 alt2"><code class="cpp color1 bold">int</code> <code
+                                            class="cpp plain">main()</code></div>
+                                    <div class="line number4 index3 alt1"><code class="cpp plain">{</code></div>
+                                    <div class="line number5 index4 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code
+                                            class="cpp color1 bold">int</code> <code class="cpp plain">x;</code></div>
+                                    <div class="line number6 index5 alt1">&nbsp;</div>
+                                    <div class="line number7 index6 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp plain">x = 0;</code>
+                                    </div>
+                                    <div class="line number8 index7 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code
+                                            class="cpp keyword bold">do</code> <code class="cpp plain">{</code></div>
+                                    <div class="line number9 index8 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp comments">/* "Hello, world!" is printed at least one time</code>
+                                    </div>
+                                    <div class="line number10 index9 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp comments">even though the condition is false */</code></div>
+                                    <div class="line number11 index10 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp functions bold">printf</code><code
+                                            class="cpp plain">( </code><code class="cpp string">"Hello, world!\n"</code>
+                                        <code class="cpp plain">);</code>
+                                    </div>
+                                    <div class="line number12 index11 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code class="cpp plain">} </code><code
+                                            class="cpp keyword bold">while</code> <code
+                                            class="cpp plain">( x != 0 );</code></div>
+                                    <div class="line number13 index12 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;</code><code
+                                            class="cpp functions bold">getchar</code><code class="cpp plain">();</code>
+                                    </div>
+                                    <div class="line number14 index13 alt1"><code class="cpp plain">}</code></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        Keep in mind that you must include a trailing semi-colon after the while in
+        the above example. A common error is to forget that a do..while loop must be
+        terminated with a semicolon (the other loops should not be terminated with a
+        semicolon, adding to the confusion). Notice that this loop will execute once,
+        because it automatically executes before checking the condition.
+        <br><br>
+        <h2>Break and Continue</h2>
+        <br>
+        Two keywords that are very important to looping are break and continue. The
+        break command will exit the most immediately surrounding loop regardless of what the conditions of the loop are.
+        Break
+        is useful if we want to exit a loop under special circumstances. For example,
+        let's say the program we're working on is a two-person checkers game. The basic structure of the
+        program might look like this:
+        <div>
+            <div class="syntaxhighlighter  cpp">
+                <table cellspacing="0" cellpadding="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td class="gutter">
+                                <div class="line number1 index0 alt2">1</div>
+                                <div class="line number2 index1 alt1">2</div>
+                                <div class="line number3 index2 alt2">3</div>
+                                <div class="line number4 index3 alt1">4</div>
+                                <div class="line number5 index4 alt2">5</div>
+                            </td>
+                            <td class="code">
+                                <div class="container">
+                                    <div class="line number1 index0 alt2"><code class="cpp keyword bold">while</code>
+                                        <code class="cpp plain">(</code><code class="cpp keyword bold">true</code><code
+                                            class="cpp plain">) </code>
+                                    </div>
+                                    <div class="line number2 index1 alt1"><code class="cpp plain">{</code></div>
+                                    <div class="line number3 index2 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">take_turn(player1);</code></div>
+                                    <div class="line number4 index3 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">take_turn(player2);</code></div>
+                                    <div class="line number5 index4 alt2"><code class="cpp plain">}</code></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        This will make the game alternate between having player 1 and player 2 take
+        turns. The only problem with this logic is that there's no way to exit the game; the loop will run forever!
+        Let's try something like this instead:
+        <div>
+            <div class="syntaxhighlighter  cpp">
+                <table cellspacing="0" cellpadding="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td class="gutter">
+                                <div class="line number1 index0 alt2">1</div>
+                                <div class="line number2 index1 alt1">2</div>
+                                <div class="line number3 index2 alt2">3</div>
+                                <div class="line number4 index3 alt1">4</div>
+                                <div class="line number5 index4 alt2">5</div>
+                                <div class="line number6 index5 alt1">6</div>
+                                <div class="line number7 index6 alt2">7</div>
+                                <div class="line number8 index7 alt1">8</div>
+                                <div class="line number9 index8 alt2">9</div>
+                            </td>
+                            <td class="code">
+                                <div class="container">
+                                    <div class="line number1 index0 alt2"><code
+                                            class="cpp keyword bold">while</code><code class="cpp plain">(</code><code
+                                            class="cpp keyword bold">true</code><code class="cpp plain">)</code></div>
+                                    <div class="line number2 index1 alt1"><code class="cpp plain">{</code></div>
+                                    <div class="line number3 index2 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp keyword bold">if</code> <code
+                                            class="cpp plain">(someone_has_won() || someone_wants_to_quit() == TRUE)</code>
+                                    </div>
+                                    <div class="line number4 index3 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">{</code><code class="cpp keyword bold">break</code><code
+                                            class="cpp plain">;}</code></div>
+                                    <div class="line number5 index4 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">take_turn(player1);</code></div>
+                                    <div class="line number6 index5 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp keyword bold">if</code> <code
+                                            class="cpp plain">(someone_has_won() || someone_wants_to_quit() == TRUE)</code>
+                                    </div>
+                                    <div class="line number7 index6 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">{</code><code class="cpp keyword bold">break</code><code
+                                            class="cpp plain">;}</code></div>
+                                    <div class="line number8 index7 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">take_turn(player2);</code></div>
+                                    <div class="line number9 index8 alt2"><code class="cpp plain">}</code></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        This code accomplishes what we want--the primary loop of the game will continue
+        under normal circumstances, but under a special condition (winning or exiting)
+        the flow will stop and our program will do something else.<br>
+        Continue is another keyword that controls the flow of loops. If you are
+        executing a loop and hit a continue statement, the loop will stop its current
+        iteration, update itself (in the case of for loops) and begin to execute
+        again from the top. Essentially, the continue statement is saying "this
+        iteration of the loop is done, let's continue with the loop without executing
+        whatever code comes after me."
+
+        Let's say we're implementing a game of Monopoly. Like above, we want to use a
+        loop to control whose turn it is, but controlling turns is a bit more
+        complicated in Monopoly than in checkers. The basic structure of our code
+        might then look something like this:
+        <div>
+            <div class="syntaxhighlighter  cpp">
+                <table cellspacing="0" cellpadding="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td class="gutter">
+                                <div class="line number1 index0 alt2">1</div>
+                                <div class="line number2 index1 alt1">2</div>
+                                <div class="line number3 index2 alt2">3</div>
+                                <div class="line number4 index3 alt1">4</div>
+                                <div class="line number5 index4 alt2">5</div>
+                                <div class="line number6 index5 alt1">6</div>
+                                <div class="line number7 index6 alt2">7</div>
+                                <div class="line number8 index7 alt1">8</div>
+                            </td>
+                            <td class="code">
+                                <div class="container">
+                                    <div class="line number1 index0 alt2"><code class="cpp keyword bold">for</code>
+                                        <code class="cpp plain">(player = 1; someone_has_won == FALSE; player++)</code>
+                                    </div>
+                                    <div class="line number2 index1 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">{</code></div>
+                                    <div class="line number3 index2 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp keyword bold">if</code> <code
+                                            class="cpp plain">(player &gt; total_number_of_players)</code></div>
+                                    <div class="line number4 index3 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">{player = 1;}</code></div>
+                                    <div class="line number5 index4 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp keyword bold">if</code> <code
+                                            class="cpp plain">(is_bankrupt(player))</code></div>
+                                    <div class="line number6 index5 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">{</code><code
+                                            class="cpp keyword bold">continue</code><code class="cpp plain">;}</code>
+                                    </div>
+                                    <div class="line number7 index6 alt2"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">take_turn(player);</code></div>
+                                    <div class="line number8 index7 alt1"><code
+                                            class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+                                            class="cpp plain">}</code></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        This way, if one player can't take her turn, the game doesn't stop for
+        everybody; we just skip her and keep going with the next player's
+        turn.
+        <br><br>
+    </div>
+        <a href="quiz3.html">Lets have the third quiz</a>
+    <footer><br><br></footer>
+</body>
+
+</html>

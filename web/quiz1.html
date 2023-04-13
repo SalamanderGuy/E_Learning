@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>e-Learning - Διαγωνίσματα</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm" style="border-bottom: 1px solid #aaa">
+            <a class="navbar-brand" href="homepage.html">
+                <img src="icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                e-Learning
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                            Κεφάλαια
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="chapter_1.html">Κεφάλαιο 1 - Εισαγωγή στους Αλγορίθμους</a>
+                            <a class="dropdown-item" href="chapter_2.html">Κεφάλαιο 2 - Εισαγωγή στην C</a>
+                            <a class="dropdown-item" href="chapter_3.html">Κεφάλαιο 3 - Η γλώσσα C σε βάθος</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Διαγωνίσματα
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="quiz1.html">Διαγώνισμα 1 - Εισαγωγή στους Αλγορίθμους</a>
+                            <a class="dropdown-item" href="quiz2.html">Διαγώνισμα 2 - Εισαγωγή στην C</a>
+                            <a class="dropdown-item" href="quiz3.html">Διαγώνισμα 3 - Η γλώσσα C σε βάθος</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="quiz4.html">Τελικό Διαγώνισμα - Επαναληπτικό</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics">Στατιστικά</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="quizes" onload="">
+            <div class="list-group list-group-horizontal" style="margin-top: 20px; margin-bottom: 20px;">
+                <a href="#" class="list-group-item list-group-item-action active">Κεφάλαιο 1<br>Εισαγωγή στους
+                    Αλγορίθμους</a>
+                <a href="quiz2.html" class="list-group-item list-group-item-action">Κεφάλαιο 2<br>Εισαγωγή στην C</a>
+                <a href="quiz3.html" class="list-group-item list-group-item-action">Κεφάλαιο 3<br>Η γλώσσα C σε
+                    βάθος</a>
+                <a href="quiz4.html" class="list-group-item list-group-item-action">Τελικό
+                    Διαγώνισμα<br>Επανάληψη των προηγουμένων</nr></a>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    1. Η έννοια του αλγόριθμου είναι θεμελιώδης για την επιστήμη της Πληροφορικής.
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-1" id="1-correct">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-1" id="1-wrong">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    2. Η έννοια του αλγόριθμου είναι γενικότερη από εκείνη του προγράμματος.
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-2" id="2-correct">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-2" id="2-wrong">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    3. Η έννοια του αλγόριθμου συνδέεται αποκλειστικά με την Πληροφορική.
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-3" id="3-wrong">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-3" id="3-correct">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    4. Μια συνταγή μαγειρικής είναι ένας αλγόριθμος
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-4" id="4-correct">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-4" id="4-wrong">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    5. Στην επίλυση προβλημάτων μέσω αλγορίθμων, υπάρχουν δύο διαφορετικοί διακριτοί ρόλοι
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-5" id="5-wrong">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-5" id="5-correct">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    6. Μια σειρά από εντολές είναι ένας αλγόριθμος.
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-6" id="6-wrong">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-6" id="6-correct">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    7. Οι εντολές ενός αλγορίθμου πρέπει να ικανοποιούν κάποια κριτήρια.
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-7" id="7-correct">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-7" id="7-wrong">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    8. Ένας αλγόριθμος είναι μια σειρά εντολών.
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-8" id="8-correct">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-8" id="8-wrong">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    9. Μια σειρά εντολών πρέπει να λαμβάνει υπόψη το μελλοντικό εκτελεστή της, προκειμένου να
+                    ικανοποιεί τα αλγοριθμικά κριτήρια.
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-10" id="9-correct">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-10" id="9-wrong">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz-header">
+                    10. Ο άνθρωπος έχει ευρύτερο σύνολο εκτελέσιμων εντολών από τον υπολογιστή.
+                </div>
+                <div class="quiz-choices">
+                    <input type="radio" name="answer-11" id="10-correct">
+                    <label for="">Σωστό</label>
+                    <br>
+                    <input type="radio" name="answer-11" id="10-wrong">
+                    <label for="">Λάθος</label>
+                </div>
+            </div>
+        </div>
+        <div class="quiz-buttons">
+            <button class="btn btn-primary" id="calc-grade-btn" type="button"
+                onclick="checkAnswers()">Αποτελέσματα</button>
+            <button class="btn btn-success" id="submit-grade-btn" type="button" disabled
+                onclick="submitGrade()">Καταχώρηση Βαθμού</button>
+        </div>
+        <script>
+            function submitGrade() {
+                // send the grade as a get request
+                const form = document.createElement('form');
+                form.method = 'get';
+                form.action = 'submitquiz1';
+
+                const hidden = document.createElement('input');
+                hidden.type = 'hidden';
+                hidden.name = 'grade';
+
+                hidden.value = document.getElementById('grade').value;
+                form.appendChild(hidden);
+                document.body.appendChild(form);
+                form.submit();
+            }
+            function checkAnswers() {
+                // Get all the inputs inside the quiz container
+                var quiz_choices_container = document.querySelectorAll('.quiz-choices');
+
+                // for every quiz-choices container, make sure that at least one radio button is checked
+                for (var i = 0; i < quiz_choices_container.length; i++) {
+                    var quiz_choices = quiz_choices_container[i].querySelectorAll('input[type=radio]');
+                    var checked = false;
+                    for (var j = 0; j < quiz_choices.length; j++) {
+                        if (quiz_choices[j].checked) {
+                            checked = true;
+                        }
+                    }
+                    if (!checked) {
+                        quiz_choices_container[i].parentNode.scrollIntoView();
+                        alert('Παρακαλώ επιλέξτε μια απάντηση σε κάθε ερώτημα.');
+                        return;
+
+                    }
+                }
+
+                // calculate the amount of correct answer. a correct answer is a checked radio button where the id contains the string "correct"
+                var correct_answers = 0;
+                var quiz_choices_container = document.querySelectorAll('.quiz-choices');
+                for (var i = 0; i < quiz_choices_container.length; i++) {
+                    var quiz_choices = quiz_choices_container[i].querySelectorAll('input[type=radio]');
+                    for (var j = 0; j < quiz_choices.length; j++) {
+                        if (quiz_choices[j].checked && quiz_choices[j].id.includes('correct')) {
+                            correct_answers++;
+                        }
+                    }
+                }
+
+                // display the percentage of correct answers to the user next to the "Αποτελέσματα" button
+                var total_questions = quiz_choices_container.length;
+                var grade = (correct_answers / total_questions * 10).toFixed(1)
+
+                var quiz_buttons = document.querySelector('.quiz-buttons');
+                var result_text = document.createElement('h3');
+                result_text.style.marginBottom = '1rem';
+                result_text.innerHTML = 'Ο βαθμός σας είναι: ' + grade + '/10';
+                quiz_buttons.appendChild(result_text);
+
+                var hidden_grade = document.createElement('input');
+                hidden_grade.type = 'hidden';
+                hidden_grade.name = 'grade';
+                hidden_grade.setAttribute('id', 'grade');
+                hidden_grade.value = grade;
+                hidden_grade.innerHTML = grade;
+                document.body.appendChild(hidden_grade);
+
+                // display "Περάσατε!" if the grade > 5 and "Προσπαθήστε ξανά!" if the grade < 5
+                if (grade >= 5) {
+                    var result_text = document.createElement('h3');
+                    result_text.innerHTML = 'Περάσατε!';
+                    result_text.style.color = '#00c985';
+                    result_text.style.marginBottom = '1rem';
+                    quiz_buttons.appendChild(result_text);
+                } else {
+                    var result_text = document.createElement('h3');
+                    result_text.innerHTML = 'Προσπαθήστε ξανά!';
+                    result_text.style.color = '#ff5a5f';
+                    result_text.style.marginBottom = '1rem';
+                    quiz_buttons.appendChild(result_text);
+
+                    // also add a button to the quiz-buttons container that will reload the page
+                    var reload_button = document.createElement('button');
+                    reload_button.classList.add('btn-warning');
+                    reload_button.innerHTML = 'Καθαρισμός';
+                    quiz_buttons.appendChild(reload_button);
+                    reload_button.onclick = function () {
+                        // uncheck all the radio buttons
+                        var quiz_choices_container = document.querySelectorAll('.quiz-choices');
+                        for (var i = 0; i < quiz_choices_container.length; i++) {
+                            var quiz_choices = quiz_choices_container[i].querySelectorAll('input[type=radio]');
+                            for (var j = 0; j < quiz_choices.length; j++) {
+                                quiz_choices[j].checked = false;
+                            }
+                        }
+                        location.reload();
+                    }
+
+                }
+
+
+                // scroll to the bottom of the page
+                window.scrollTo(0, document.body.scrollHeight);
+
+
+                // apply a green background to the correct answers and a red background to the wrong answers
+                var quiz_choices_container = document.querySelectorAll('.quiz-choices');
+                for (var i = 0; i < quiz_choices_container.length; i++) {
+                    var quiz_choices = quiz_choices_container[i].querySelectorAll('input[type=radio]');
+                    for (var j = 0; j < quiz_choices.length; j++) {
+                        if (quiz_choices[j].checked && quiz_choices[j].id.includes('correct')) {
+                            quiz_choices_container[i].style.backgroundColor = '#00c985';
+                        } else if (quiz_choices[j].checked && !quiz_choices[j].id.includes('correct')) {
+                            quiz_choices_container[i].style.backgroundColor = '#ec0b43';
+                        }
+                    }
+                }
+
+                // disable the "Αποτελέσματα" button
+                document.getElementById('calc-grade-btn').disabled = true;
+                document.getElementById('submit-grade-btn').disabled = false;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

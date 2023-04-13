@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>e-Learning - Κεφάλαιο 1</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm" style="border-bottom: 1px solid #aaa">
+            <a class="navbar-brand" href="homepage.html">
+                <img src="icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                e-Learning
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                            Κεφάλαια
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="chapter_1.html">Κεφάλαιο 1 - Εισαγωγή στους Αλγορίθμους</a>
+                            <a class="dropdown-item" href="chapter_2.html">Κεφάλαιο 2 - Εισαγωγή στην C</a>
+                            <a class="dropdown-item" href="chapter_3.html">Κεφάλαιο 3 - Η γλώσσα C σε βάθος</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Διαγωνίσματα
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="quiz1.html">Διαγώνισμα 1 - Εισαγωγή στους Αλγορίθμους</a>
+                            <a class="dropdown-item" href="quiz2.html">Διαγώνισμα 2 - Εισαγωγή στην C</a>
+                            <a class="dropdown-item" href="quiz3.html">Διαγώνισμα 3 - Η γλώσσα C σε βάθος</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="quiz4.html">Τελικό Διαγώνισμα - Επαναληπτικό</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics">Στατιστικά</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
+            <br>
+            <h1>Algorithm</h1>
+            In mathematics and computer science, an algorithm (/ˈælɡərɪðəm/) is a finite
+            sequence of well-defined instructions, typically used to solve a class of specific problems or to perform a
+            computation. Algorithms are used as specifications for performing calculations and data processing. By
+            making use of artificial intelligence, algorithms can perform automated deductions (referred to as automated
+            reasoning) and use mathematical and logical tests to divert the code through various routes (referred to as
+            automated decision-making). Using human characteristics as descriptors of machines in metaphorical ways was
+            already practiced by Alan Turing with terms such as "memory", "search" and "stimulus".
+            <br>
+            As an effective method, an algorithm can be expressed within a finite amount of space and time, and in a
+            well-defined formal language for calculating a function. Starting from an initial state and initial
+            input (perhaps empty), the instructions describe a computation that, when executed, proceeds through a
+            finite number of well-defined successive states, eventually producing "output" and terminating at a
+            final ending state. The transition from one state to the next is not necessarily deterministic; some
+            algorithms, known as randomized algorithms, incorporate random input.
+            <br><br>
+            <h1>Informal definition</h1>
+            An informal definition could be "a set of rules that precisely defines a sequence of operations", which
+            would include all computer programs (including programs that do not perform
+            numeric calculations), and (for example) any prescribed bureaucratic procedure or cook-book recipe.
+            <br><br>
+            In general, a program is only an algorithm if it stops eventually—even though infinite loops may
+            sometimes prove desirable.
+            <br><br>
+            A prototypical example of an algorithm is the Euclidean algorithm, which is used to determine the maximum
+            common divisor of two integers; an example (there are others) is described by the flowchart above and as an
+            example in a later section.
+            <br><br>
+            Boolos, Jeffrey & 1974, 1999 offer an informal meaning of the word "algorithm" in the following quotation:
+            <br><br>
+            <i>
+                No human being can write fast enough, or long enough, or small enough† ( †"smaller and smaller without
+                limit
+                ... you'd be trying to write on molecules, on atoms, on electrons") to list all members of an enumerably
+                infinite set by writing out their names, one after another, in some notation. But humans can do
+                something
+                equally useful, in the case of certain enumerably infinite sets: They can give explicit instructions for
+                determining the nth member of the set, for arbitrary finite n. Such instructions are to be given quite
+                explicitly, in a form in which they could be followed by a computing machine, or by a human who is
+                capable
+                of carrying out only very elementary operations on symbols.
+            </i>
+            <br><br>
+            An "enumerably infinite set" is one whose elements can be put into one-to-one correspondence with the
+            integers. Thus Boolos and Jeffrey are saying that an algorithm implies instructions for a process that
+            "creates" output integers from an arbitrary "input" integer or integers that, in theory, can be arbitrarily
+            large. For example, an algorithm can be an algebraic equation such as y = m + n (i.e., two arbitrary "input
+            variables" m and n that produce an output y), but various authors' attempts to define the notion indicate
+            that the word implies much more than this, something on the order of (for the addition example):
+
+            Precise instructions (in a language understood by "the computer") for a fast, efficient, "good"
+            process that specifies the "moves" of "the computer" (machine or human, equipped with the necessary
+            internally contained information and capabilities) to find, decode, and then process arbitrary input
+            integers/symbols m and n, symbols + and = ... and "effectively" produce, in a "reasonable" time,
+            output-integer y at a specified place and in a specified format.
+
+            The concept of algorithm is also used to define the notion of decidability—a notion that is central for
+            explaining how formal systems come into being starting from a small set of axioms and rules. In logic, the
+            time that an algorithm requires to complete cannot be measured, as it is not apparently related to the
+            customary physical dimension. From such uncertainties, that characterize ongoing work, stems the
+            unavailability of a definition of algorithm that suits both concrete (in some sense) and abstract usage of
+            the term.
+
+            Most algorithms are intended to be implemented as computer programs. However, algorithms are also
+            implemented by other means, such as in a biological neural network (for example, the human brain
+            implementing arithmetic or an insect looking for food), in an electrical circuit, or in a mechanical device.
+            <br><br>
+            <h1>Expressing algorithms</h1>
+            <br>
+            Algorithms can be expressed in many kinds of notation, including natural languages, pseudocode, flowcharts,
+            drakon-charts, programming languages or control tables (processed by interpreters). Natural language
+            expressions of algorithms tend to be verbose and ambiguous, and are rarely used for complex or technical
+            algorithms. Pseudocode, flowcharts, drakon-charts and control tables are structured ways to express
+            algorithms that avoid many of the ambiguities common in the statements based on natural language.
+            Programming languages are primarily intended for expressing algorithms in a form that can be executed by a
+            computer, but are also often used as a way to define or document algorithms.
+
+            There is a wide variety of representations possible and one can express a given Turing machine program as a
+            sequence of machine tables (see finite-state machine, state transition table and control table for more), as
+            flowcharts and drakon-charts (see state diagram for more), or as a form of rudimentary machine code or
+            assembly code called "sets of quadruples" (see Turing machine for more).
+
+            Representations of algorithms can be classed into three accepted levels of Turing machine description, as
+            follows:
+            <br>
+            <b>1 High-level description</b>
+            "...prose to describe an algorithm, ignoring the implementation details. At this level, we do not need to
+            mention how the machine manages its tape or head."
+            <br>
+            <b>2 Implementation description</b>
+            "...prose used to define the way the Turing machine uses its head and the way that it stores data on its
+            tape. At this level, we do not give details of states or transition function."
+            <br>
+            <b>3 Formal description</b>
+            Most detailed, "lowest level", gives the Turing machine's "state table".
+        </div>
+         <a href="quiz1.html">Lets have the first quiz</a>
+        <footer><br><br></footer>
+
+</body>
+
+</html>
